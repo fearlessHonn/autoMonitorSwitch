@@ -1,4 +1,7 @@
 from os import system
+import rotatescreen
 
-system('cmd /c "dpedit.exe 1 0 0 2 -1920 0"')
-print('switched to normal')
+system(r'cmd /c "C:\Users\henlu\PycharmProjects\autoMonitorSwitch\DPEdit.exe 1 0 0 2 -1920 0"')
+system(r'cmd /c "C:\Users\henlu\PycharmProjects\autoMonitorSwitch\nircmd.exe setprimarydisplay 2"')
+screen = rotatescreen.get_secondary_displays()[0]
+screen.set_landscape()
